@@ -15,8 +15,10 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/budget", {
+mongoose.connect("mongodb+srv://kevinchewning1:po5fgsEVWi8Z8B2Q@cluster0.pmum3.mongodb.net/Budget-Tracker?retryWrites=true&w=majority", {
   useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
   useFindAndModify: false
 });
 
